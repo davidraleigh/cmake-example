@@ -73,7 +73,6 @@ public:
 
     void set(int index, int value)
     {
-        int count = 0;
         int previous_stop = 0;
         bool has_prev = false;
         bool has_next = true;
@@ -89,7 +88,7 @@ public:
                 int current_stop = (*ptr).m_stop;
                 int old_value = (*ptr).m_value;
 
-                if (count == m_runs.size() - 1)
+                if (std::next(ptr) == m_runs.end())
                     // if not last item then has next
                     has_next = false;
 
@@ -126,7 +125,6 @@ public:
             {
                 previous_stop = (*ptr).m_stop;
                 has_prev = true;
-                count += 1;
             }
         }
     }
