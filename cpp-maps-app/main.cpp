@@ -13,10 +13,11 @@ int main(int argc, char *argv[]) {
     if (argc > 1) {
         seed = atoi(argv[1]);
     }
-    std::mt19937 mt(seed);
+    std::mt19937_64 prng;
+    prng.seed(seed);
     std::cout << "seed = " << seed << std::endl;
 
-    int loop_count = 42;
+    int loop_count = 6;
     if (argc > 2) {
         loop_count = atoi(argv[2]);
     }
@@ -30,7 +31,7 @@ int main(int argc, char *argv[]) {
         if (actual.run_count() == 1) {
             test_val += 32;
         }
-        int index = indices(mt);
+        int index = indices(prng);
         int value = test_val;
 
         std::cout << "setting value " << value << " at index " << index << std::endl;
@@ -45,6 +46,5 @@ int main(int argc, char *argv[]) {
         std::cout << "run count: " << actual.run_count() << std::endl << std::endl;
     }
 
-    std::cout << "Hello, World!" << std::endl;
     return 0;
 }

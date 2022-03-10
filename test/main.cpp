@@ -215,7 +215,8 @@ namespace {
 
     TEST_F(CppMapTest, TEST_RLE_INT_MAP_RANDOM) {
         int seed = 1999;
-        std::mt19937 mt(seed);
+        std::mt19937_64 mt;
+        mt.seed(seed);
         int max_length = 12;
         int test_val = max_length + 4;
 
