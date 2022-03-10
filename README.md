@@ -1,5 +1,17 @@
 ## Build Locally with CMAKE
 
+### Installing CMAKE
+On Mac use homebrew (or follow instructions [here](https://cmake.org/install/) if you don't use homebrew)
+```shell script
+brew install cmake
+```
+
+On Windows use the instructions on [cmake.org](https://cmake.org/install/)
+
+On linux use a package installer
+
+### Project build
+
 In project dir 
 ```shell script
 mkdir temp
@@ -7,6 +19,8 @@ cd temp
 cmake ..
 make
 ```
+
+### Testing
 
 Confirm build with unit test from within `temp` build directory
 ```shell script
