@@ -7,6 +7,7 @@
 
 #include <vector>
 #include <iterator>
+#include <cassert>
 
 class int_map
 {

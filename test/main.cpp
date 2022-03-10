@@ -3,14 +3,13 @@
 //
 
 #include <string>
-
 #include <thread>
-
-#include "cpp_maps.h"
-#include "gtest/gtest.h"
 #include <cstdlib>
 #include <memory>
 #include <random>
+
+#include "cpp_maps.h"
+#include "gtest/gtest.h"
 
 namespace {
     class CppMapTest : public ::testing::Test {

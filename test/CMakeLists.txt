@@ -1,7 +1,7 @@
 # https://github.com/dmonopoly/gtest-cmake-example/blob/master/CMakeLists.txt
 # http://www.kaizou.org/2014/11/gtest-cmake/
 # https://stackoverflow.com/questions/8507723/how-to-start-working-with-gtest-and-cmake
-cmake_minimum_required(VERSION 3.7)
+cmake_minimum_required(VERSION 3.13.4)
 
 project(unitTest C CXX)
 find_package(GTest REQUIRED)
